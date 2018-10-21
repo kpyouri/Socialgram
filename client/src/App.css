@@ -4,20 +4,24 @@ img {
 
 .landing {
   position: relative;
-  background: url('./img/showcase.jpg') no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
   margin-top: -24px;
   margin-bottom: -50px;
 }
-
+.lead{
+  color: black;
+}
+.display-3{
+  color: black;
+}
 .landing-inner {
   padding-top: 80px;
 }
 
 .dark-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
+  /* background-color: rgba(0, 0, 0, 0.7); */
   position: absolute;
   top: 0;
   left: 0;
@@ -36,4 +40,17 @@ img {
 
 .form-control::placeholder {
   color: #bbb !important;
+}
+
+
+.navbar{
+  background-color:teal;
+}
+
+.nav-link{
+  color: white;
+}
+
+.navbar-brand{
+  color: white;
 }
