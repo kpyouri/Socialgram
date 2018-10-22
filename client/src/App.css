@@ -38,19 +38,6 @@ img {
   height: 40px;
 }
 
-.form-control::placeholder {
-  color: #bbb !important;
-}
-
-
-.navbar{
-  background-color:teal;
-}
-
-.nav-link{
-  color: white;
-}
-
-.navbar-brand{
-  color: white;
+body {
+  background-color: #FAFAFA;
 }

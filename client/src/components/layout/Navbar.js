@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
+import './Navbar.css'
 
 class Navbar extends Component {
   render() {
     return (
-<nav className="navbar navbar-expand-sm ">
+<nav className="navbar navbar-container navbar-expand-sm ">
 
 {/* navbar-dark bg-dark mb-4 */}
 
     <div className="container">
-      <a className="navbar-brand" href="landing.html">DevConnector</a>
+      <a className="navbar-brand" href="landing.html"><i className="fas fa-home"></i></a>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-nav">
         <span className="navbar-toggler-icon"></span>
       </button>

@@ -1,19 +1,24 @@
 import React, { Component } from 'react'
+import './Landing.css'
 
 class Landing extends Component {
   render() {
     return (
+
 <div className="landing" >
     <div className="dark-overlay landing-inner text-light">
-      <div className="container">
+      <div className="container landing-container">
         <div className="row">
           <div className="col-md-12 text-center">
-            <h1 className="display-3 mb-4">Developer Connector
+          <img className="logo" src="./img/instagram_logo.png" alt="socialgram logo"/>
+            <h1 className="display-3 mb-4"> Socialgram
+            
             </h1>
-            <p className="lead"> Create a developer profile/portfolio, share posts and get help from other developers</p>
-            <hr />
-            <a href="register.html" className="btn btn-lg btn-info mr-2">Sign Up</a>
-            <a href="login.html" className="btn btn-lg btn-light">Login</a>
+            <p className="lead landing-desc"> Create a developer profile/portfolio, share posts and get help from other developers</p>
+            <div className="register-container">
+              <a href="register.html" className="btn btn-lg btn-info mr-2">Sign Up</a>
+              <a href="login.html" className="btn btn-lg btn-light">Login</a>
+            </div>
           </div>
         </div>
       </div>
