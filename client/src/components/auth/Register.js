@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import './Register.css'
 
 class Register extends Component {
     constructor(){
@@ -38,8 +39,8 @@ this.setState({[e.target.name]: e.target.value});
     return (
 <div className="register">
     <div className="container">
-      <div className="row">
-        <div className="col-md-8 m-auto">
+      <div className="row register-container">
+        <div className="col-md-8 m-auto register-card">
           <h1 className="display-4 text-center">Sign Up</h1>
           <p className="lead text-center">Create your Socialgram account</p>
           <form onSubmit={this.onSubmit}>

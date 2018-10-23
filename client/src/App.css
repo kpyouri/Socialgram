@@ -3,12 +3,8 @@ img {
 }
 
 .landing {
-  position: relative;
   background-size: cover;
   background-position: center;
-  height: 100vh;
-  margin-top: -24px;
-  margin-bottom: -50px;
 }
 .lead{
   color: black;
