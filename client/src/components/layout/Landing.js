@@ -15,7 +15,7 @@ class Landing extends Component {
             <p className="lead landing-desc"> Create a developer profile/portfolio, share posts and get help from other developers</p>
             <div className="register-container">
               <a href="register.html" className="btn btn-lg btn-info mr-2">Sign Up</a>
-              <a href="login.html" className="btn btn-lg btn-light">Login</a>
+              <a href="login.html" className="btn btn-lg btn-light ">Login</a>
             </div>
           </div>
         </div>

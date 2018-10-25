@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+
+
 import './Navbar.css';
 import {Link} from 'react-router-dom';
 
@@ -10,7 +12,7 @@ class Navbar extends Component {
 {/* navbar-dark bg-dark mb-4 */}
 
     <div className="container">
-      <Link className="navbar-brand" to="/"><i className="fas fa-home"></i></Link>
+      <Link className="navbar-brand"  to="/"><i className="fab fa-instagram"></i></Link>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-nav">
         <span className="navbar-toggler-icon"></span>
       </button>
@@ -18,7 +20,7 @@ class Navbar extends Component {
       <div className="collapse navbar-collapse" id="mobile-nav">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
-            <Link className="nav-link" to="/profiles"> Developers
+            <Link className="nav-link" to="/profiles"> Socialgram
             </Link>
           </li>
         </ul>
