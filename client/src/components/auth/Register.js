@@ -28,8 +28,11 @@ onSubmit(e){
 
     axios.post('/api/users/register', newUser)
     .then(res => console.log(res.data))
-    .catch(err => console.log(err.response.data));
-}
+    .catch(err => 
+        this.setState({
+            errors: err.response.data
+        })
+    )}
 
 onChange(e){
 this.setState({[e.target.name]: e.target.value});
@@ -45,7 +48,7 @@ this.setState({[e.target.name]: e.target.value});
           <p className="lead text-center">Create your Socialgram account</p>
           <form onSubmit={this.onSubmit}>
             <div className="form-group">
-              <input type="text" className="form-control form-control-lg" placeholder="Name" name="name" 
+              <input type="text" className="is-invalid form-control form-control-lg" placeholder="Name" name="name" 
               value={this.state.name}
               onChange={this.onChange}
                />

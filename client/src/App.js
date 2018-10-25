@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import Landing from './components/layout/Landing';
+import Profiles from './components/profiles/Profiles'
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
@@ -18,6 +19,7 @@ class App extends Component {
           <div className="container">
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
+          <Route path="/profiles" component={Profiles} />
           {/* <Route exact path="/profiles" component={Profiles}/> */}
           </div>
         </Switch> 
