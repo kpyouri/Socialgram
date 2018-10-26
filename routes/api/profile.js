@@ -6,7 +6,6 @@ const Profile = require('../../models/Profile');
 //Load user model
 const User = require('../../models/User');
 // Load Validation
-const validateProfileInput = require('../../validation/profile');
 
 
 // @route GET api/profile
