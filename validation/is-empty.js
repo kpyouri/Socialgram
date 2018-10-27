@@ -7,3 +7,4 @@ const isEmpty = value =>
   value.trim().length === 0);
 
   module.exports = isEmpty;
+  
