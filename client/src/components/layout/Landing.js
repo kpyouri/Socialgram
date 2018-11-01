@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import './Landing.css'
 
+import {Link} from 'react-router-dom';
+
 class Landing extends Component {
   render() {
     return (
@@ -13,16 +15,14 @@ class Landing extends Component {
           <img className="logo" src="./img/instagram_logo.png" alt="socialgram logo"/>
             <p className="title">Socialgram</p>
             <p className="lead landing-desc"> Create a developer profile/portfolio, share posts and get help from other developers</p>
-            <div className="register-container">
-              <a href="register.html" className="btn btn-lg btn-info mr-2">Sign Up</a>
-              <a href="login.html" className="btn btn-lg btn-light ">Login</a>
+            <hr />
+              <Link to="/register" className= "btn btn-lg btn-info mr-2">Sign Up</Link>
+              <Link to="/login" className= "btn btn-lg btn-light">Login</Link>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-
     )
   }
 }
