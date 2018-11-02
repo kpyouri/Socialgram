@@ -23,9 +23,6 @@ const ProfileSchema = new Schema({
   bio: {
     type: String
   },
-  gender: {
-    type: String
-  },
   social: {
     youtube:{
       type: String
