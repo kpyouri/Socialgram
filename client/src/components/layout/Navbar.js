@@ -26,6 +26,13 @@ class Navbar extends Component {
         </ul>
 
         <ul className="navbar-nav ml-auto">
+        
+        {/* Once Register authenticates already existing user- this code will work. This is to show Edit Profile when user logs in and if it's newcomers, they won't see this edit profile. Need logic for this code to run */}
+          
+          <li className="nav-item">
+              <Link to="/edit-profile" className="nav-link">
+        <i className="fas fa-user-circle text-info mr-1" /> Edit Profile
+      </Link></li>
           <li className="nav-item">
             <Link className="nav-link" to="/register">Sign Up</Link>
           </li>
