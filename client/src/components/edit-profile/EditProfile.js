@@ -42,6 +42,10 @@ class CreateProfile extends Component {
     if (nextProps.profile.profile) {
       const profile = nextProps.profile.profile;
 
+      // Bring skills array back to CSV
+      //used to be const profile = nextProps.profile.profile;
+      const skillsCSV = profile.skills && profile.skills.join(',');
+
       // If profile field doesnt exist, make empty string
       profile.company = !isEmpty(profile.company) ? profile.company : '';
       profile.website = !isEmpty(profile.website) ? profile.website : '';
@@ -165,8 +169,11 @@ class CreateProfile extends Component {
           <div className="row">
             <div className="col-md-8 m-auto">
               <Link to="/dashboard" className="btn btn-light">
+                {/* <i className="fas fa-angle-left"></i>
+                <span className="go-back-icon"></span> */}
                 Go Back
               </Link>
+              {/* <div className="edit-profile-card"> */}
               <h1 className="display-4 text-center">Edit Profile</h1>
               <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
@@ -239,11 +246,13 @@ class CreateProfile extends Component {
                   value="Submit"
                   className="btn btn-info btn-block mt-4"
                 />
+                
               </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+
     );
   }
 }

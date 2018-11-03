@@ -1,5 +1,7 @@
+
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Posts from '../posts/Posts';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getCurrentProfile, deleteAccount } from '../../actions/profileActions';
