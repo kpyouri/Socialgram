@@ -33,6 +33,8 @@ class Navbar extends Component {
               <Link to="/edit-profile" className="nav-link">
         <i className="fas fa-user-circle text-info mr-1" /> Edit Profile
       </Link></li>
+      
+
           <li className="nav-item">
             <Link className="nav-link" to="/register">Sign Up</Link>
           </li>

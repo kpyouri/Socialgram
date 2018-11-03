@@ -4,11 +4,15 @@ import { connect } from 'react-redux';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
 import { addPost } from '../../actions/postActions';
 
+
+
+
 class PostForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
       text: '',
+      photo: '',
       errors: {}
     };
 
@@ -30,7 +34,8 @@ class PostForm extends Component {
     const newPost = {
       text: this.state.text,
       name: user.name,
-      avatar: user.avatar
+      avatar: user.avatar,
+      photo: user.avatar
     };
 
     this.props.addPost(newPost);
@@ -43,8 +48,10 @@ class PostForm extends Component {
 
   render() {
     const { errors } = this.state;
+    const {classes} = this.props;
 
     return (
+      
       <div className="post-form mb-3">
         <div className="card card-info">
           <div className="card-header bg-info text-white">Say Something...</div>
@@ -58,7 +65,9 @@ class PostForm extends Component {
                   onChange={this.onChange}
                   error={errors.text}
                 />
+               
               </div>
+            
               <button type="submit" className="btn btn-dark">
                 Submit
               </button>
@@ -66,6 +75,7 @@ class PostForm extends Component {
           </div>
         </div>
       </div>
+
     );
   }
 }
@@ -73,7 +83,9 @@ class PostForm extends Component {
 PostForm.propTypes = {
   addPost: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequired
+  errors: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired,
+
 };
 
 const mapStateToProps = state => ({
