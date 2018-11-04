@@ -30,7 +30,8 @@ class PostForm extends Component {
     const newPost = {
       text: this.state.text,
       name: user.name,
-      avatar: user.avatar
+      avatar: user.avatar,
+      url: this.state.url
     };
 
     this.props.addPost(newPost);
@@ -55,6 +56,14 @@ class PostForm extends Component {
                   placeholder="Create a post"
                   name="text"
                   value={this.state.text}
+                  onChange={this.onChange}
+                  error={errors.text}
+                /> 
+                
+                 <TextAreaFieldGroup
+                  placeholder="Enter url"
+                  name="url"
+                  value={this.state.url}
                   onChange={this.onChange}
                   error={errors.text}
                 />
