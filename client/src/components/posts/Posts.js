@@ -5,6 +5,7 @@ import PostForm from './PostForm';
 import PostFeed from './PostFeed';
 import Spinner from '../common/Spinner';
 import { getPosts } from '../../actions/postActions';
+import './Posts.css';
 
 class Posts extends Component {
   componentDidMount() {
@@ -23,8 +24,8 @@ class Posts extends Component {
 
     return (
       <div className="feed">
-        <div className="container">
-          <div className="row">
+        <div className="container containerPost">
+          <div className="row col-sm-12">
             <div className="col-md-12">
               <PostForm />
               {postContent}
