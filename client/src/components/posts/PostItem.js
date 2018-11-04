@@ -46,8 +46,8 @@ class PostItem extends Component {
           </div>
           <div className="col-md-10">
             <p className="lead">{post.text}</p>
-            <p
-                className="rounded-circle d-none d-md-block"
+            <img
+                className="d-none d-md-block"
                 src={post.url}
                 alt=""
               />
