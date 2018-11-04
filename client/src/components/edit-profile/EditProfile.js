@@ -7,6 +7,7 @@ import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
 import InputGroup from '../common/InputGroup';
 import { createProfile, getCurrentProfile } from '../../actions/profileActions';
 import isEmpty from '../../validation/is-empty';
+import './EditProfile.css';
 
 class CreateProfile extends Component {
   constructor(props) {
@@ -74,6 +75,9 @@ class CreateProfile extends Component {
         company: profile.company,
         website: profile.website,
         location: profile.location,
+        status: profile.status,
+        // skills: skillsCSV,
+        // githubusername: profile.githubusername,
         bio: profile.bio,
         twitter: profile.twitter,
         facebook: profile.facebook,
@@ -169,11 +173,11 @@ class CreateProfile extends Component {
           <div className="row">
             <div className="col-md-8 m-auto">
               <Link to="/dashboard" className="btn btn-light">
-                {/* <i className="fas fa-angle-left"></i>
-                <span className="go-back-icon"></span> */}
+                <i className="fas fa-angle-left fa fw"></i>
+                <span className="go-back-icon"></span>
                 Go Back
               </Link>
-              {/* <div className="edit-profile-card"> */}
+              <div className="edit-profile-card">
               <h1 className="display-4 text-center">Edit Profile</h1>
               <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
@@ -252,6 +256,7 @@ class CreateProfile extends Component {
             </div>
           </div>
         </div>
+      </div>
 
     );
   }

@@ -1,12 +1,13 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Posts from '../posts/Posts';
+// import Posts from '../posts/Posts';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getCurrentProfile, deleteAccount } from '../../actions/profileActions';
 import Spinner from '../common/Spinner';
-import ProfileActions from './ProfileActions';
+// import ProfileActions from './ProfileActions';
+import './dashboard.css';
 
 
 class Dashboard extends Component {
@@ -34,7 +35,8 @@ class Dashboard extends Component {
             <p className="lead text-muted">
               Welcome <Link to={`/profile/${profile.handle}`}>{user.name}</Link>
             </p>
-            <ProfileActions />
+            {/* Note that this ProfileActions is commented out because we do not want to show two edit profile button on dashboard as we have one in the navbar. */}
+            {/* <ProfileActions /> */}
             <div style={{ marginBottom: '60px' }} />
             <button
               onClick={this.onDeleteClick.bind(this)}
