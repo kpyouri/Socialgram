@@ -45,6 +45,12 @@ class PostItem extends Component {
             <p className="text-center">{post.name}</p>
           </div>
           <div className="col-md-10">
+          */test purpose*/
+          <img
+                className="d-none d-md-block"
+                src={post.url}
+                alt=""
+              />
             <p className="lead">{post.text}</p>
             {showActions ? (
               <span>
