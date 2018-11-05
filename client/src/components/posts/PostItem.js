@@ -44,17 +44,7 @@ class PostItem extends Component {
             <br />
             <p className="text-center">{post.name}</p>
           </div>
-<<<<<<< HEAD
-          <div className="col-md-10">
-          */test purpose*/
-          <img
-                className="d-none d-md-block"
-                src={post.url}
-                alt=""
-              />
-=======
           <div className="col-md-9">
->>>>>>> e0fe793a71571c3f2e4b3edcc70bbd5ad759ce66
             <p className="lead">{post.text}</p>
             <img
                 className="d-none d-md-block"
