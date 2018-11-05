@@ -11,6 +11,7 @@ class Navbar extends Component {
 
   onLogoutClick(e) {
     e.preventDefault();
+    this.props.clearCurrentProfile();
     this.props.logoutUser();
   }
 
@@ -24,9 +25,11 @@ render() {
             </Link>
           </li>         
           <li className="nav-item">
+          <span className="fas fa-user-circle text-info mr-1" /> 
               <Link to="/edit-profile" className="nav-link">
-        <i className="fas fa-user-circle text-info mr-1" /> Edit Profile
-      </Link></li>
+       Edit Profile
+      </Link>
+      </li>
       
 
           <li className="nav-item">
@@ -41,7 +44,7 @@ render() {
                 src={user.avatar}
                 alt={user.name}
                 style={{width: '25px', marginRight: '5px'}}
-                title="You must have a gravatar connected to your email to display an image"/ >
+                title="You must have a gravatar connected to your email to display an image" />{''}
             Logout
             </a>
           </li>
@@ -63,8 +66,6 @@ const guestLinks = (
     return (
 <nav className="navbar navbar-container navbar-expand-sm ">
 
-{/* navbar-dark bg-dark mb-4 */}
-
     <div className="container">
       <Link className="navbar-brand"  to="/"><i className="fab fa-instagram"></i></Link>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-nav">
@@ -74,12 +75,14 @@ const guestLinks = (
       <div className="collapse navbar-collapse" id="mobile-nav">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
-            <Link className="nav-link" to="/profiles"> Socialgram
+            <Link className="nav-link" to="/profiles"> 
+            {''}
+            Socialgram
             </Link>
           </li>
         </ul>
 
-        <ul className="navbar-nav ml-auto">
+        {/* <ul className="navbar-nav ml-auto"> */}
         
         {/* Once Register authenticates already existing user- this code will work. This is to show Edit Profile when user logs in and if it's newcomers, they won't see this edit profile. Need logic for this code to run */}
           
@@ -87,8 +90,9 @@ const guestLinks = (
               <Link to="/edit-profile" className="nav-link">
         <i className="fas fa-user-circle text-info mr-1" /> Edit Profile
       </Link></li> */}
-      </ul>
+      
       {isAuthenticated ? authLinks : guestLinks}
+      
       </div>
     </div>
   </nav>
