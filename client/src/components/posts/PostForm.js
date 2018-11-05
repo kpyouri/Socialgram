@@ -12,7 +12,7 @@ class PostForm extends Component {
     super(props);
     this.state = {
       text: '',
-      photo: '',
+      url: '',
       errors: {}
     };
 
@@ -33,13 +33,16 @@ class PostForm extends Component {
 
     const newPost = {
       text: this.state.text,
+      url: this.state.url,
       name: user.name,
-      avatar: user.avatar,
-      photo: user.avatar
+      avatar: user.avatar
     };
 
     this.props.addPost(newPost);
-    this.setState({ text: '' });
+    this.setState({
+      text: '',
+      url: ''
+     });
   }
 
   onChange(e) {
@@ -65,7 +68,14 @@ class PostForm extends Component {
                   onChange={this.onChange}
                   error={errors.text}
                 />
-               
+
+                 <TextAreaFieldGroup
+                  placeholder="Enter url"
+                  name="url"
+                  value={this.state.url}
+                  onChange={this.onChange}
+                  error={errors.url}
+                />
               </div>
             
               <button type="submit" className="btn btn-dark">
