@@ -33,7 +33,9 @@ class PostForm extends Component {
 
     const newPost = {
       text: this.state.text,
+      url: this.state.url,
       name: user.name,
+<<<<<<< HEAD
       avatar: user.avatar,
       photo: user.avatar,
       url: this.state.url
@@ -42,6 +44,16 @@ class PostForm extends Component {
     this.props.addPost(newPost);
     //this.setState({ url: '' });
     //this.setState({ text: '' });
+=======
+      avatar: user.avatar
+    };
+
+    this.props.addPost(newPost);
+    this.setState({
+      text: '',
+      url: ''
+     });
+>>>>>>> e0fe793a71571c3f2e4b3edcc70bbd5ad759ce66
   }
 
   onChange(e) {
@@ -67,8 +79,14 @@ class PostForm extends Component {
                   onChange={this.onChange}
                   error={errors.text}
                 />
+<<<<<<< HEAD
                <TextAreaFieldGroup
                   placeholder="Post a url"
+=======
+
+                 <TextAreaFieldGroup
+                  placeholder="Enter url"
+>>>>>>> e0fe793a71571c3f2e4b3edcc70bbd5ad759ce66
                   name="url"
                   value={this.state.url}
                   onChange={this.onChange}

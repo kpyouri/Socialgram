@@ -33,7 +33,7 @@ class PostItem extends Component {
     return (
       <div className="card card-body mb-3">
         <div className="row">
-          <div className="col-md-2">
+          <div className="col-md-3">
             <Link to="/profile">
               <img
                 className="rounded-circle d-none d-md-block"
@@ -44,6 +44,7 @@ class PostItem extends Component {
             <br />
             <p className="text-center">{post.name}</p>
           </div>
+<<<<<<< HEAD
           <div className="col-md-10">
           */test purpose*/
           <img
@@ -51,7 +52,15 @@ class PostItem extends Component {
                 src={post.url}
                 alt=""
               />
+=======
+          <div className="col-md-9">
+>>>>>>> e0fe793a71571c3f2e4b3edcc70bbd5ad759ce66
             <p className="lead">{post.text}</p>
+            <img
+                className="d-none d-md-block"
+                src={post.url}
+                alt=""
+              />
             {showActions ? (
               <span>
                 <button
