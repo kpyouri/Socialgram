@@ -7,6 +7,8 @@ import CommentForm from './CommentForm';
 import CommentFeed from './CommentFeed';
 import Spinner from '../common/Spinner';
 import { getPost } from '../../actions/postActions';
+import Avatar from 'material-ui/Avatar'
+
 
 class Post extends Component {
   componentDidMount() {
@@ -25,6 +27,7 @@ class Post extends Component {
           <PostItem post={post} showActions={false} />
           <CommentForm postId={post._id} />
           <CommentFeed postId={post._id} comments={post.comments} />
+          <Avatar postId={'/api/users/photo/'+this.props.post.postedBy._id}/>
         </div>
       );
     }

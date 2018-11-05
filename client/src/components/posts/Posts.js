@@ -7,6 +7,7 @@ import Spinner from '../common/Spinner';
 import { getPosts } from '../../actions/postActions';
 import './Posts.css';
 
+
 class Posts extends Component {
   componentDidMount() {
     this.props.getPosts();
@@ -24,9 +25,10 @@ class Posts extends Component {
 
     return (
       <div className="feed">
-        <div className="container containerPost">
-          <div className="row col-sm-12">
-            <div className="col-md-12">
+        <div className="container">
+          <div className="row">
+            <div className="feed_div feed_div col-md-8 offset-md-2 col-sm-12">
+
               <PostForm />
               {postContent}
             </div>
