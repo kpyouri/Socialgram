@@ -25,9 +25,11 @@ render() {
             </Link>
           </li>         
           <li className="nav-item">
+          <span className="fas fa-user-circle text-info mr-1" /> 
               <Link to="/edit-profile" className="nav-link">
-        <i className="fas fa-user-circle text-info mr-1" /> Edit Profile
-      </Link></li>
+       Edit Profile
+      </Link>
+      </li>
       
 
           <li className="nav-item">
@@ -42,7 +44,7 @@ render() {
                 src={user.avatar}
                 alt={user.name}
                 style={{width: '25px', marginRight: '5px'}}
-                title="You must have a gravatar connected to your email to display an image"/ >{''}
+                title="You must have a gravatar connected to your email to display an image" />{''}
             Logout
             </a>
           </li>
@@ -63,8 +65,6 @@ const guestLinks = (
 
     return (
 <nav className="navbar navbar-container navbar-expand-sm ">
-
-{/* navbar-dark bg-dark mb-4 */}
 
     <div className="container">
       <Link className="navbar-brand"  to="/"><i className="fab fa-instagram"></i></Link>
@@ -92,6 +92,7 @@ const guestLinks = (
       </Link></li> */}
       
       {isAuthenticated ? authLinks : guestLinks}
+      
       </div>
     </div>
   </nav>
