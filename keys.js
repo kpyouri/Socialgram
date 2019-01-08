@@ -1,5 +1,6 @@
 module.exports = {
   mongoURI:
-  'mongodb://admin:test123456@ds052827.mlab.com:52827/socialgram', 
+ master
+  'mongodb://socialgram.admin:test123456@ds014658.mlab.com:14658/socialgram', 
   secretOrKey: 'secret'
 }
