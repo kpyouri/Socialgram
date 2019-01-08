@@ -1,0 +1,16 @@
+.App .navbar-container {
+    background-color: gainsboro;
+    border-bottom: 1px solid rgb(230, 225, 225);
+}
+
+.nav-link{
+    color: black;
+  }
+  
+  .navbar-brand{
+    color: black;
+  }
+
+  .logo{
+    width: 40%;
+  }
