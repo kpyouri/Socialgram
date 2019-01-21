@@ -3,3 +3,4 @@
 package-lock.json
 keys.js
 .vscode
+/config/keys.dev.js
